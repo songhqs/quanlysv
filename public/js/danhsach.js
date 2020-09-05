@@ -1,7 +1,7 @@
 $(function () {
     $.ajax({
         method: "GET",
-        url: "http://localhost:3000/users",
+        url: "http://ql-hocvien.herokuapp.com/users",
 
     })
         .done(function (users) {
@@ -26,7 +26,7 @@ function deletedanhsach() {
 }
 
 $.ajax({
-    url: "http://localhost:3000/users",
+    url: "http://ql-hocvien.herokuapp.com/users",
     method: "POST",
     data: {
         "name": "Tri Minh Man",
