@@ -36,4 +36,4 @@ $.ajax({
         "birthday": "4/4/2008",
         "gender": "Male"
     }
-})
+});
