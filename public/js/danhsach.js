@@ -20,10 +20,38 @@ $(function () {
             $('#table').html(htmlString);
         });
 });
-
-function deletedanhsach() {
+function confirmDelete{
+    studentId = id;
     $('#exampleModal').modal('show');
 }
+
+
+
+function deletedanhsach() {
+    $.ajax({
+        url: "http://ql-hocvien.herokuapp.com/users" + studentId,
+        method: "DELETE",
+    })
+        .done(function (result) {
+            // C1: Tải lại trang
+
+            // C2: Không tải lại trang
+            // Lấy lại danh sách users, sau đó render lại table => Tốn thời gian lấy lại danh sách users
+
+            // C3: Không tải lại trang
+            // Dòng DOM để xóa
+        })
+        .fail(function (err) {
+            if (err.status == 404) {
+                alert("hoc vien khong ton tai");
+            } else {
+                alert("không xoa được");
+            }
+        });
+
+}
+
+
 
 $.ajax({
     url: "http://ql-hocvien.herokuapp.com/users",
