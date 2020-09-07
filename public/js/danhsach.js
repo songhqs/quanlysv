@@ -20,7 +20,7 @@ $(function () {
             $('#table').html(htmlString);
         });
 });
-function confirmDelete{
+function confirmDelete(){
     studentId = id;
     $('#exampleModal').modal('show');
 }
