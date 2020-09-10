@@ -1,3 +1,5 @@
+
+let studentId =0;
 $(function () {
     $.ajax({
         method: "GET",
@@ -5,63 +7,56 @@ $(function () {
 
     })
         .done(function (users) {
-            console.log(users)
+           
             let htmlString = "";
             for (let i = 0; i < users.length; i++) {
-                htmlString += `<tr>
-        <td>${users[i].name}</td>
-        <td>${users[i].email}</td>
-        <td>${users[i].phone}</td>
-        <td>${users[i].id}</td>
-        <td>${users[i].gender}</td>
-        </tr>`
-
+                htmlString += `<tr id="user-${users[i].id}">
+                <td>${users[i].name}</td>
+                <td>${users[i].email}</td>
+                <td>${users[i].phone}</td>
+                <td>${users[i].id}</td>
+                <td>${users[i].gender}</td>
+                <td>
+                <a href="/edit.html?id=${users.id}" class="text-info"
+                  ><i class="fa fa-edit"></i> Chỉnh sửa</a>
+                |
+                <a href="javascript:void(0)" class="text-danger" onclick="confirmDelete(${users.id})"
+              ><i class="fa fa-trash-alt"></i> Xóa</a>
+              </td>
+                </tr>`;
             }
             $('#table').html(htmlString);
         });
 });
-function confirmDelete(){
+function createUser(id) {
     studentId = id;
-    $('#exampleModal').modal('show');
-}
-
-
-
-function deletedanhsach() {
-    $.ajax({
-        url: "http://ql-hocvien.herokuapp.com/users" + studentId,
-        method: "DELETE",
-    })
-        .done(function (result) {
-            // C1: Tải lại trang
-
-            // C2: Không tải lại trang
-            // Lấy lại danh sách users, sau đó render lại table => Tốn thời gian lấy lại danh sách users
-
-            // C3: Không tải lại trang
-            // Dòng DOM để xóa
-        })
-        .fail(function (err) {
-            if (err.status == 404) {
-                alert("hoc vien khong ton tai");
-            } else {
-                alert("không xoa được");
-            }
-        });
-
-}
-
-
-
 $.ajax({
-    url: "http://ql-hocvien.herokuapp.com/users",
+    url: `http://ql-hocvien.herokuapp.com/users/${id}`,
     method: "POST",
     data: {
-        "name": "Tri Minh Man",
-        "email": "tri@simplemachines.org",
-        "password": "123456",
-        "phone": "462-441-6079",
-        "birthday": "4/4/2008",
-        "gender": "Male"
-    }
+        name: $("#name").val(),
+        birthday: $("#birthday").val(),
+        phone: $("#phone").val(),
+        email: $("#email").val()
+    },
+    dataType: "json",
+        success: function (response) {
+            window.location.href= "/"
+        }
 });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
