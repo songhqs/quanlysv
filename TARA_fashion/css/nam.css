@@ -1,0 +1,140 @@
+#carouselExampleIndicators {
+    max-width: 530px;
+    border: solid 1px red;
+    margin-top: 0px;
+    
+}
+.carousel-caption{
+    background: rgba(117, 190, 218, 0.5);
+    max-height: 120px;
+}
+body{
+
+    margin: auto;
+    max-width: 1400px;
+}
+.navbar{
+    text-transform: uppercase;
+    background-color: white;
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+}
+.top_menu{
+    display: flex;
+    max-width: 650px;
+    justify-content: space-around;
+    margin-left: 930px;
+    border: solid 1px lightgrey;
+    align-items: center;
+}
+header{
+    max-width: 1400px;
+    background-image: url("../img/benner-nho.jpg");
+    height: 422px;
+    position: relative;
+    margin: auto;
+    background-attachment: fixed;
+}
+.nav-item-active a{
+    color:green
+      }
+    
+      .logo{
+        display: flex;
+        max-width: 500px;
+        height: auto;
+        margin-top: 230px;
+        margin-left: 100px;
+        align-items: center;
+       position: absolute;
+    }
+    .brand-name{
+        font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;;
+        text-transform: uppercase;
+        font-weight: 550;
+        
+        color: white;
+        white-space: normal;
+        
+        
+     
+    }
+    .logo-wrap{
+        padding: 30px;
+        line-height: 0;
+    }
+    .slogan{
+        color: white;
+    }
+    .top_menu{
+        
+       max-width: 300px;
+        justify-content: space-evenly;  
+        border: solid 1px lightgrey;
+    }
+    
+ul li a{
+    text-transform: uppercase;
+    color: black;
+    font-size: 14px;
+    font-weight: 700;
+}
+li{
+    list-style-type: none;
+    line-height: 2rem;
+}
+ul{
+    padding: 0px;
+}
+.footer{
+    margin-top: 2rem;
+    background-color: rgb(17, 73, 70);
+    justify-content: space-evenly;
+    
+}
+.footer p a{
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.footer h5{
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   text-transform: uppercase;
+   margin-bottom: 1.5rem;
+   font-size: 1rem;
+
+}
+h5{
+    color: white;
+}
+.icon{
+    max-width: 180px;
+    display: flex;
+    border: 1px solid thistle;
+    justify-content: space-around;
+      
+
+}
+span{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    color: black;
+}
+
+input::-moz-progress-bar {
+    max-width: 400px;
+}
+
+
+.fixed-bottom{
+    position: fixed;
+     bottom: 50px; 
+     right: 50px; 
+     cursor: pointer; 
+     transition: opacity 0.2s linear 0s, visibility; 
+     opacity: 0.5; 
+     visibility: visible;
+    max-width: 50px;
+    left: auto;
+}

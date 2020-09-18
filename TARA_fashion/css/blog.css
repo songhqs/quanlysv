@@ -1,0 +1,177 @@
+.navbar{
+    text-transform: uppercase;
+    background-color:rgb(43, 51, 126);
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+}
+.nav-item-active a{
+    color:green
+      }
+    
+.top_menu{
+    display: flex;
+    max-width: 250px;
+    justify-content: space-around;
+    margin-left: 930px;
+    border: solid 1px lightgrey;
+    align-items: center;
+}
+
+body{
+    margin: auto;
+    max-width: 1400px;
+}
+.container{
+    margin: auto;
+    max-width: 1150px;
+    
+}
+
+p{
+    text-align: justify;
+}
+ul li a{
+    text-transform: uppercase;
+    color: black;
+    font-size: 13px;
+    font-weight: 700;
+}
+li{
+    list-style-type: none;
+    line-height: 2rem;
+}
+ul{
+    padding: 0px;
+}
+header{
+    max-width: 1400px;
+    background-image: url("../img/bannernho.jpg");
+   
+    height: 254px;
+    margin: auto;
+    animation: zoom forwards;
+    position: relative;
+    background-attachment: fixed;
+   
+}
+@-webkit-keyframes zoom{
+    from{
+        transform: scale(1s);
+}
+to{
+    transform: scale(1.2s);
+}
+}
+.advertise{
+    text-align: center;
+    color: cyan;
+    margin-top: 50px;
+    position: absolute;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-style: italic;
+    box-sizing: border-box;
+    margin-left: 300px;
+    animation: word-fly 4s forwards;
+    animation-delay: 3s;
+    opacity: 0;
+    animation-iteration-count:100;
+    
+}
+@-webkit-keyframes word-fly{
+    from{
+        opacity: 0.3;
+        margin-left: 0;
+    }
+    to{
+        opacity: 1;
+        margin-left: 900px;
+    }
+}
+
+.logo{
+    display: flex;
+    max-width: 500px;
+    height: auto;
+    margin-top: 80px;
+    
+    margin-left: 100px;
+    align-items: center;
+    position: absolute;
+   
+}
+.brand-name{
+    font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;;
+    text-transform: uppercase;
+    font-weight: 550;
+    
+    color: white;
+    white-space: normal;
+    
+    
+ 
+}
+.logo-wrap{
+    padding: 30px;
+    line-height: 0;
+}
+.slogan{
+    color: white;
+}
+.top_menu{
+    
+   max-width: 300px;
+    justify-content: space-evenly;  
+    border: solid 1px lightgrey;
+}
+
+.footer{
+    margin-top: 2rem;
+    background-color: rgb(17, 73, 70);
+    justify-content: space-evenly;
+    
+}
+.footer p a{
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.footer h5{
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   text-transform: uppercase;
+   margin-bottom: 1.5rem;
+   font-size: 1rem;
+
+}
+h5{
+    color: white;
+}
+.icon{
+        max-width: 180px;
+        display: flex;
+        border: 1px solid thistle;
+        justify-content: space-around;
+          
+    
+    }
+    span{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 14px;
+        color: black;
+        line-height: 10px;
+    }
+    .fixed-bottom {
+        position: fixed;
+        bottom: 50px; 
+        right: 50px; 
+        cursor: pointer; 
+        transition: opacity 0.2s linear 0s, visibility; 
+        opacity: 0.5; 
+        visibility: visible;
+        left: auto;
+
+      
+     
+       max-width: 50px;
+   }
